@@ -76,7 +76,10 @@ function mealRecipeModal(meal) {
 
     // Adding an event listener for the "Done" button
     const doneBtn = document.getElementById('done-btn');
-    doneBtn.addEventListener('click', () => {
+    doneBtn.addEventListener('click', (event) => {
+        // Prevent the default behavior of the anchor element
+        event.preventDefault();
+
         // Perform actions when "Done" button is clicked
         console.log("Meal completed!");
     });
